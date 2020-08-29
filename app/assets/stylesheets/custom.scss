@@ -1,0 +1,589 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* universal */
+
+.nav_list_item p, .main_content h3 {
+  font-family: Sacramento, "Helvetica Neue Ultra Light", "Times New Roman", monospace, sans-serif;
+}
+
+h1, h2 {
+  font-family: "Noto Serif Japanese",　"M+ 1p", "TNoto Sans Japaneze", monospace, sans-serif;
+}
+
+.container {
+  width: 100%;
+}
+
+.line {
+  color: #220000;
+  font-size: 20px;
+}
+
+.back_btn {
+  width: 500px;
+  margin-bottom: 5px;
+  .btn {
+    color: #220000;
+  }
+}
+
+
+
+
+/* header */
+
+.header_nav {
+  width: 100%;
+  height: 65px;
+  background-color: rgb(58, 210, 183);
+  border-bottom: solid 1px rgb(3, 121, 115);
+  ul {
+    list-style-type: none;
+    padding-right: 70px;
+    li {
+      display: inline-block;
+      padding: 0 10px;
+      font-size: 19px;
+      color: #fff;
+      a {
+        color: #fff;
+        span {
+          font-size: 13px;
+        }
+        p {
+          font-size: 7px;
+        }
+      }
+    }
+    .title_nav {
+      width :210px;
+      height: 100px;
+      background-color: #FFF;
+      border-radius: 0 0 100px 100px;
+      border: solid 2px rgb(3, 121, 115);
+      h2 {
+        font-size: 22px;
+        font-weight: 900;
+        color: #220000;
+      }
+    }
+  }
+}
+
+
+
+/* hamburger_btn */
+
+#hm_icon {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 10;
+}
+
+.menu_trigger,
+.menu_trigger span {
+  display: inline-block;
+  transition: all .4s;
+  box-sizing: border-box;
+}
+
+.menu_trigger {
+  position: relative;
+  width: 50px;
+  height: 44px;
+}
+
+.menu_trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+}
+
+.menu_trigger span:nth-of-type(1) {
+  top: 0;
+  background-color: rgb(3, 121, 115);
+}
+
+.menu_trigger span:nth-of-type(2) {
+  top: 20px;
+  background-color: #fff;
+}
+
+.menu_trigger span:nth-of-type(3) {
+  bottom: 0;
+  background-color: #220000;
+}
+
+.menu_trigger.active span:nth-of-type(1) {
+  -webkit-transform: translateY(20px) rotate(-45deg);
+  transform: translateY(20px) rotate(-45deg);
+  background-color: rgb(3, 121, 115);
+}
+
+.menu_trigger.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.menu_trigger.active span:nth-of-type(3) {
+  -webkit-transform: translateY(-20px) rotate(45deg);
+  transform: translateY(-20px) rotate(45deg);
+  background-color: #220000;
+}
+
+
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #F5F5F5;
+  width: 100%;
+  min-height: 100%;
+  display: none;
+  z-index: 9;
+  h2 {
+    color: rgb(3, 121, 115);
+    font-weight: 900;
+  }
+  li {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  a {
+    color: #220000;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+
+
+
+
+/* home_main */
+
+.main_content h3 {
+  font-size: 45px;
+  text-align: center;
+  color: #220000;
+  padding-top: 50px;
+}
+
+
+
+.background_image {
+  width: 100%;
+  background-image: url("background_image.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+}
+
+
+
+.main_image {
+  height: 850px;
+  width: 100%;
+  background-image: url("main_image.jpeg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  p {
+    writing-mode: vertical-rl;
+    margin: 0px auto;
+    padding-top: 200px;
+    font-size: 20px;
+    color: #fff;
+  }
+}
+
+.twitter_icon {
+  height: 50px;
+  width: 50px;
+  background-image: url("twitter.png");
+  background-size: 50px 50px;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
+
+.main_info {
+  display: inline-block;
+  height: 150px;
+  width: 350px;
+  background-color: #FFF;
+  border: double 5px rgb(3, 121, 115);
+  border-radius: 50% 60% 50% 80%/50% 50% 80% 70%;
+  position: absolute;
+  bottom: 150px;
+  left: 80px;
+  h1 {
+    padding-top: 20px;
+    font-weight: 900;
+    color: #220000;
+  }
+}
+
+.info_dvd {
+  color: #fff;
+  margin-top:65px;
+  h6 {
+    font-size: 19px;
+    font-family: Sacramento, sans-serif;
+    border-bottom: solid 2px #D2B48C;
+    span {
+      font-size: 30px;
+    }
+  }
+}
+
+.info_actor {
+  color: #fff;
+  font-size: 20px;
+  span {
+    color: #FF9999;
+  }
+}
+
+
+
+.introduction {
+  h4 {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  .intro_actor1 {
+    height: 330px;
+    width: 330px;
+    background-image: url("intro_actor1.jpeg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 80% 40% 50% 80%/50% 90% 80% 30%;
+    border: solid 1px rgb(3, 121, 115);
+  }
+  .intro_actor2 {
+    height: 330px;
+    width: 330px;
+    background-image: url("intro_actor2.jpeg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 50% 60% 50% 30%/50% 20% 80% 70%;
+    border: solid 1px rgb(3, 121, 115);
+  }
+  .intro_actor3 {
+    height: 330px;
+    width: 330px;
+    background-image: url("intro_actor3.jpeg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 50% 60% 40% 80%/60% 50% 70% 10%;
+    border: solid 1px rgb(3, 121, 115);
+  }
+}
+
+.intro_actor {
+  h5 {
+    margin-top: 40px;
+    font-weight: 500;
+    color: rgb(0, 126, 123);
+    font-size: 18px;
+    strong {
+      font-size: 22px;
+    }
+  }
+  p {
+    color: #220000;
+  }
+}
+
+.intro_image {
+  margin-top: 40px;
+  .intro_image1 {
+    height: 100px;
+    width: 210px;
+    background-image: url("intro_image1.jpeg");
+    background-size: cover;
+    background-position: center;
+    border: solid 1px rgb(3, 121, 115);
+  }
+  .intro_image2 {
+    height: 100px;
+    width: 210px;
+    background-image: url("intro_image2.jpeg");
+    background-size: cover;
+    background-position: center;
+    border: solid 1px rgb(3, 121, 115);
+  }
+  .intro_image3 {
+    height: 100px;
+    width: 210px;
+    background-image: url("intro_image3.jpeg");
+    background-size: cover;
+    background-position: center;
+    border: solid 1px rgb(3, 121, 115);
+  }
+  .intro_image4 {
+    height: 100px;
+    width: 210px;
+    background-image: url("intro_image4.jpeg");
+    background-size: cover;
+    background-position: center;
+    border: solid 1px rgb(3, 121, 115);
+  }
+}
+
+
+
+.story_more_image {
+  height: 250px;
+  width: 300px;
+  margin: 0 auto;
+  background-image: url("story_more_image.jpeg");
+  background-saize: cover;
+  background-position: center;
+  p {
+    line-height: 250px;
+    color: #fff;
+    font-size: 30px;
+  }
+}
+
+.synopsis_box {
+  height: 850px;
+}
+
+#story_slide {
+  height: 350px;
+  width: 500px;
+  margin: 50px auto;
+}
+
+.synopsis {
+  margin: 10px;
+}
+
+.story1 {
+  background-image: image-url("story1.jpeg");
+}
+
+.story2 {
+  background-image: image-url("story2.jpeg");
+  color: #fff;
+}
+
+.story3 {
+  background-image: image-url("story3.jpeg");
+}
+
+.story4 {
+  background-image: image-url("story4.jpeg");
+}
+
+.story5 {
+  background-image: image-url("story5.jpeg");
+  color: #fff;
+}
+
+.story6 {
+  background-image: image-url("story6.jpeg");
+  color: #fff;
+}
+
+
+
+.cast_staff {
+  p {
+    span {
+      font-size: 20px;
+    }
+  }
+  .cast1-image {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    background-image: url("intro_actor2.jpeg");
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    border: solid 1px rgb(3, 121, 115);
+  }
+  .cast2-image {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    background-image: url("intro_actor1.jpeg");
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    border: solid 1px rgb(3, 121, 115);
+  }
+  .cast3-image {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    background-image: url("intro_actor3.jpeg");
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    margin-top: 30px;
+    border: solid 1px rgb(3, 121, 115);
+  }
+  .cast4-image {
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    background-image: url("actor4.jpeg");
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    margin-top: 30px;
+    border: solid 1px rgb(3, 121, 115);
+  }
+}
+
+
+
+.product_oa {
+  .product_oa_title {
+    font-size: 15px;
+    padding-top: 30px;
+    color: rgb(3, 121, 115);
+  }
+  p {
+    color: #220000;
+    strong {
+      font-size: 25px;
+    }
+    span {
+      font-size: 25px;
+    }
+  }
+  .dvd_image {
+    height: 120px;
+    width: 80px;
+    background-image: url("dvd.jpeg");
+    background-size: cover;
+    background-position: center;
+  }
+  .vod {
+    ul {
+      li {
+        display: inline-block;
+        padding: 5px;
+        font-size: 15px;
+        color: rgb(3, 121, 115);
+      }
+    }
+  }
+}
+
+
+
+.gallery-images {
+  display: flex;
+}
+
+.gallery-images > div {
+  width: 33%;
+  height: 300px;
+  background-color: #fff;
+}
+
+.gallery-image1 {
+  background-image: url("gallery1.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery-image2 {
+  background-image: url("gallery2.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery-image3 {
+  background-image: url("gallery3.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery-image4 {
+  background-image: url("gallery4.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery-image5 {
+  background-image: url("gallery5.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery-image6 {
+  background-image: url("gallery6.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+
+/* top */
+
+.main_contents {
+  padding-top: 65px;
+}
+
+.main_content {
+  margin-top: -65px;
+  padding-top: 65px;
+}
+
+
+
+
+
+@media screen and (max-width:950px) {
+
+  /* header */
+
+  .header_1 {
+  display: none;
+  }
+
+
+  /* home_main */
+
+  .main_image {
+    position: static;
+  }
+
+  .main_info {
+    position: static;
+    margin-top: 30px;
+  }
+
+  .info_dvd {
+    color: #220000;
+    h6 {
+      border-bottom: solid 2px #fff;
+    }
+  }
+
+  .info_actor {
+    color: #220000;
+    span {
+      color: rgb(3, 121, 115);
+    }
+  }
+}
